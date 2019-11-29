@@ -1,7 +1,10 @@
-import React from "react";
-import logger from 'redux-logger';
-
+import React,{useEffect} from "react";
 import ReactDOM from "react-dom";
+
+import logger from 'redux-logger';
+import thunk from 'redux-thunk';
+
+
 import {createStore, applyMiddleware} from 'redux';
 import {Provider} from 'react-redux';
 
@@ -9,8 +12,11 @@ import "./index.css";
 
 import {smurfReducer} from './reducers/smurfReducer.js';
 import App from "./components/App";
+import {smursActionFetchData} from './components/actions/smurfAction'
 
-const store = createStore(smurfReducer,applyMiddleware(logger));
+
+const store = createStore(smurfReducer,applyMiddleware(thunk, logger));
+
 
 //http://localhost:3333/smurfs
 const rootElement = document.getElementById('root');

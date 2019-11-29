@@ -6,6 +6,8 @@ import {connect} from 'react-redux';
 const Name = (props) => {
 	
 	
+	
+	
 	return (
 		<>
 	
@@ -18,7 +20,7 @@ const Name = (props) => {
 const mapStateToProps = state => {
 	return{
 	//used map to map over state instead of using name: state[0].name
-		name: state.map(name => name.name)
+		 name: state.name
 	}
 };
 

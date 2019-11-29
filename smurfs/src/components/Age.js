@@ -14,7 +14,7 @@ class Age extends React.Component {
 const mapStateToProps = state => {
     return {
     //used map to map over state instead of using name: state[0].age    
-        age: state.map(age => age.age)
+         age: state.age
     }
 }
 

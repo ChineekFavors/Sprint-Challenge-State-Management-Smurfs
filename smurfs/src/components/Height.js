@@ -12,7 +12,7 @@ const Height = (props) => {
 const mapStateToProps = state => {
 	return{
 	//used map to map over state instead of using name: state[0].name
-		height: state.map(height => height.height)
+		height: state.height
 	}
 };
 

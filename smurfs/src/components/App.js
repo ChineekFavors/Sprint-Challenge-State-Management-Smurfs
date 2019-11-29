@@ -1,4 +1,7 @@
-import React from "react";
+import React,{useEffect} from "react";
+import {connect} from 'react-redux';
+
+import {smursActionFetchData} from './actions/smurfAction';
 
 
 import Name from './Name.js';
@@ -9,8 +12,12 @@ import SmurfForm from './SmurfForm.js';
 import "./App.css";
 
 
-const App = () => {
- 
+const App = (props) => {
+  useEffect( () => {
+    props.smursActionFetchData();
+
+  },);
+
 
     return (
       <div className="App">
@@ -31,7 +38,9 @@ const App = () => {
     );
   
 };
-
+const mapDispatchToProps = {
+  smursActionFetchData
+}
  
 
-export default App;
+export default connect(null, mapDispatchToProps)(App);
