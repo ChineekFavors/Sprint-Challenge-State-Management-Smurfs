@@ -3,17 +3,23 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 
-const Name = (state) => {
-	console.log(state.name)
+const Name = (props) => {
+	
+	
 	return (
-		<h3>surf Name</h3>
+		<>
+	
+			<h3 className='paragraph nameH3'>Name: {props.name}</h3>
+		</>
 	);
-}
+};
+
 
 const mapStateToProps = state => {
 	return{
-		name: state.name,
+	//used map to map over state instead of using name: state[0].name
+		name: state.map(name => name.name)
 	}
-}
+};
 
 export default connect(mapStateToProps, {})(Name);

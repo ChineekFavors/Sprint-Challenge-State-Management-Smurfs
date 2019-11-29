@@ -10,9 +10,11 @@ import App from "./components/App";
 
 const store = createStore(smurfReducer);
 
-
+//http://localhost:3333/smurfs
+const rootElement = document.getElementById('root');
 ReactDOM.render(
 	<Provider store={store}>
-	<App />
+		<App />
 	</Provider>, 
-	document.getElementById("root"));
+	rootElement
+);	
