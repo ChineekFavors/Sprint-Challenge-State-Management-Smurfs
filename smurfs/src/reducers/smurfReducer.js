@@ -17,7 +17,7 @@ export const smurfReducer = (state = initialState, action) =>{
       return {  
         // ...state,
         // success: true,
-      smurfs : action.payload.map(smurf => smurf),
+      name : action.payload.map(smurf => smurf.name),
       }
     
 

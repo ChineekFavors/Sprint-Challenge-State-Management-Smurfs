@@ -14,12 +14,12 @@ const Name = (props) => {
 
 	return (
 	
-		<>
-			{/* {props.name.map( smurf => <h3 className='paragraph nameH3'>{smurf}</h3> )} */}
+		<div>
+			{/* {props.name.map( smurf => (<h3 className='paragraph nameH3'>{smurf}</h3> ))}  */}
 
 			{/* <h3 className='paragraph nameH3'>Name:</h3> 
 			<h3>{props.name}</h3> */}
-		</>
+		</div>
 	);
 };
 
@@ -28,7 +28,7 @@ const mapStateToProps = state => {
 	
 	return{
 		
-		name: state.smurfs
+		 name: state.name
 	}
 };
 
