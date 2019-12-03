@@ -1,7 +1,8 @@
 import React,{useEffect} from "react";
 import {connect} from 'react-redux';
+import {smursActionFetchData} from './actions/smurfAction'
 
-import {smursActionFetchData} from './actions/smurfAction';
+
 
 
 import Name from './Name.js';
@@ -16,7 +17,7 @@ const App = (props) => {
   useEffect( () => {
     props.smursActionFetchData();
 
-  },);
+  });
 
 
     return (
@@ -25,7 +26,7 @@ const App = (props) => {
         {/* <div>Welcome to your state management version of Smurfs!</div>
         <div>Start inside of your `src/index.js` file!</div>
         <div>Have fun!</div> */}
-        <div className="loader">Loading...</div>
+        {/* <div className="loader">Loading...</div> */}
         <div className='smurf-container'>
             <Name />
             <Age />
@@ -39,7 +40,7 @@ const App = (props) => {
   
 };
 const mapDispatchToProps = {
-  smursActionFetchData
+  smursActionFetchData 
 }
  
 

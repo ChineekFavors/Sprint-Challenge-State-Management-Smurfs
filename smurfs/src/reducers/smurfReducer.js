@@ -1,11 +1,11 @@
- import {FETCHING_SMURF_DATA} from '../components/actions/smurfAction.js';
+import {FETCHING_SMURF_DATA} from '../components/actions/smurfAction.js';
+
+
 const initialState = {
-  // {
-  //   name: "",
-  //   age: '',
-  //   height: "",
-  //   id: null
-  // }
+  
+     isDataLoaded: false,
+     success: false,
+     error: null,
 };
 
 
@@ -13,17 +13,16 @@ const initialState = {
 export const smurfReducer = (state = initialState, action) =>{
   switch(action.type) {
     case FETCHING_SMURF_DATA:
-    console.log('smurReducer.js:action.payload',action.payload)
-      return {
-        
-        name: action.payload.map(name => name.name),
-        age: action.payload.map(age => age.age),
-        height: action.payload.map(height => height.height),
-        id: action.payload.map(id => id.id),
-      
+    // console.log('smurfReducer.js:action.payload',action.payload.map(smurf => smurf.name))
+      return {  
+        // ...state,
+        // success: true,
+      smurfs : action.payload.map(smurf => smurf),
       }
+    
+
     default:
       return state
-    }
+  }
 
 }

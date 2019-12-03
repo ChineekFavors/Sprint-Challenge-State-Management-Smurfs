@@ -12,7 +12,7 @@ import "./index.css";
 
 import {smurfReducer} from './reducers/smurfReducer.js';
 import App from "./components/App";
-import {smursActionFetchData} from './components/actions/smurfAction'
+
 
 
 const store = createStore(smurfReducer,applyMiddleware(thunk, logger));
